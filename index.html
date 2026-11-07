@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>2048 Star Wars — slide tiles, destroy the Empire</title>
+  <meta name="description" content="Play 2048 Star Wars: slide tiles of stormtroopers, TIE fighters and droids, merge matching pairs, and work your way up the ranks of the saga.">
+
+  <link rel="canonical" href="https://tile2048.github.io/2048-STARWARS/">
+  <link rel="alternate" hreflang="en" href="https://tile2048.github.io/2048-STARWARS/">
+  <link rel="alternate" hreflang="es" href="https://tile2048.github.io/2048-STARWARS/es/">
+  <link rel="alternate" hreflang="x-default" href="https://tile2048.github.io/2048-STARWARS/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="2048 Star Wars — slide tiles, destroy the Empire">
+  <meta property="og:description" content="Play 2048 Star Wars: slide tiles of stormtroopers, TIE fighters and droids, merge matching pairs, and work your way up the ranks of the saga.">
+  <meta property="og:url" content="https://tile2048.github.io/2048-STARWARS/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
+
+  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="format-detection" content="telephone=no" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "2048 Star Wars",
+    "inLanguage": "en",
+    "url": "https://tile2048.github.io/2048-STARWARS/",
+    "description": "A Star Wars version of the 2048 sliding tile puzzle: merge equal tiles to climb from stormtrooper to Death Star."
+  }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <nav class="lang-links"><span>English</span> <a href="es/" hreflang="es" lang="es">Español</a></nav>
+
+    <div class="heading">
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+      <div class="title-container">
+        <h1 class="title">2048<small>Star Wars</small></h1>
+      </div>
+    </div>
+
+    <div class="above-game">
+      <p class="game-intro">Join tiles and destroy <strong>EMPIRE!</strong></p>
+      <a class="restart-button">New Game</a>
+    </div>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+	        <a class="keep-playing-button">Keep going</a>
+          <a class="retry-button">Try again</a>
+          <div class="score-sharing"></div>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
+    </div>
+
+    <p class="game-explanation">
+      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same symbol touch, they <strong>get promoted!</strong>
+    </p>
+    <p class="game-about">
+      A stormtrooper at 2 is where this board begins, and the Death Star at 2048 is where it ends. In between stand a super trooper, Darth Vader, a TIE fighter, an x-wing, the Millennium Falcon, an AT-AT, C-3PO, R2-D2 and Yoda: eleven tiles, one per value, each with its own picture instead of a number. Arrow keys or a swipe move all of them together, and two identical pictures fuse into the next one up, scoring as they go. Keep spare squares and think a couple of moves ahead: a full board with no matching pair ends the run. Assemble the Death Star to clear the galaxy.
+    </p>
+    <hr>
+    <p class="tile-legend"><strong class="important">Tile Legend:</strong></p>
+    <div class="legend-list">
+      <div class="legend-row">
+        <div class="legend-grid"><div class="legend-cell cell-2"><img src="style/img/2.svg" alt="stormtrooper"></div></div>
+        <p>stormtrooper</p>
+      </div>
+      <div class="legend-row">
+        <div class="legend-grid"><div class="legend-cell cell-4"><img src="style/img/4.svg" alt="super trooper"></div></div>
+        <p>super trooper</p>
+      </div>
+      <div class="legend-row">
+        <div class="legend-grid"><div class="legend-cell cell-8"><img src="style/img/8.svg" alt="Darth Vader"></div></div>
+        <p>Darth Vader</p>
+      </div>
+      <div class="legend-row">
+        <div class="legend-grid"><div class="legend-cell cell-16"><img src="style/img/16.svg" alt="TIE fighter"></div></div>
+        <p>TIE fighter</p>
+      </div>
+      <div class="legend-row">
+        <div class="legend-grid"><div class="legend-cell cell-32"><img src="style/img/32.svg" alt="X-wing"></div></div>
+        <p>X-wing</p>
+      </div>
+      <div class="legend-row">
+        <div class="legend-grid"><div class="legend-cell cell-64"><img src="style/img/64.svg" alt="Millennium Falcon"></div></div>
+        <p>Millennium Falcon</p>
+      </div>
+      <div class="legend-row">
+        <div class="legend-grid"><div class="legend-cell cell-128"><img src="style/img/128.svg" alt="AT-AT all-terrain armored transport"></div></div>
+        <p>AT-AT all-terrain armored transport</p>
+      </div>
+      <div class="legend-row">
+        <div class="legend-grid"><div class="legend-cell cell-256"><img src="style/img/256.svg" alt="C-3PO protocol droid"></div></div>
+        <p>C-3PO protocol droid</p>
+      </div>
+      <div class="legend-row">
+        <div class="legend-grid"><div class="legend-cell cell-512"><img src="style/img/512.svg" alt="R2-D2 astromech droid"></div></div>
+        <p>R2-D2 astromech droid</p>
+      </div>
+      <div class="legend-row">
+        <div class="legend-grid"><div class="legend-cell cell-1024"><img src="style/img/1024.svg" alt="Yoda"></div></div>
+        <p>Yoda</p>
+      </div>
+      <div class="legend-row">
+        <div class="legend-grid"><div class="legend-cell cell-2048"><img src="style/img/2048.svg" alt="Death Star"></div></div>
+        <p>Death Star</p>
+      </div>
+    </div>
+    <hr>
+    <p class="disclaimer">
+    <strong class="important">Note:</strong> A fan-made variant of 2048, the original game by Gabriele Cirulli.
+    </p>
+    <hr>
+    <p class="credits">
+      Star Wars icons by <a href="http://sensibleworld.com/news/more-free-star-wars-icons/" title="Free Star Wars Icons by Sensible World">Jory Raphael</a>.
+    </p>
+  </div>
+
+  <script src="js/bind_polyfill.js"></script>
+  <script src="js/classlist_polyfill.js"></script>
+  <script src="js/animframe_polyfill.js"></script>
+  <script>
+    // Assets and sentences of this page. The Spanish page sets ../ and its own words.
+    window.GAME_ROOT = "";
+
+    // Text that only appears once a game is running, in the language of this page.
+    window.PAGE_STRINGS = {
+      "game-won": "You win!",
+      "game-over": "Game over!",
+      "tweet1": "I scored \"",
+      "tweet2": "\" at 2048-STARWARS #2048game",
+      "2": "stormtrooper",
+      "4": "super trooper",
+      "8": "Darth Vader",
+      "16": "TIE fighter",
+      "32": "X-wing",
+      "64": "Millennium Falcon",
+      "128": "AT-AT all-terrain armored transport",
+      "256": "C-3PO protocol droid",
+      "512": "R2-D2 astromech droid",
+      "1024": "Yoda",
+      "2048": "Death Star",
+      "p0": "trooper",
+      "p2": "trooper",
+      "p4": "s.trooper",
+      "p8": "Vader",
+      "p16": "TIE",
+      "p32": "x-wing",
+      "p64": "Falcon",
+      "p128": "at-at",
+      "p256": "c-3po",
+      "p512": "r2-d2",
+      "p1024": "Yoda",
+      "p2048": "Death Star"
+    };
+
+    function Localize(key) {
+      var name = String(key);
+      if (window.PAGE_STRINGS.hasOwnProperty(name)) return window.PAGE_STRINGS[name];
+      // Scores that no longer sit on a tile fall back to the plain number.
+      if (name.charAt(0) === "p" && window.PAGE_STRINGS.hasOwnProperty(name.slice(1))) {
+        return window.PAGE_STRINGS[name.slice(1)];
+      }
+      return name;
+    }
+  </script>
+  <script src="js/keyboard_input_manager.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/local_storage_manager.js"></script>
+  <script src="js/game_manager.js"></script>
+  <script src="js/application.js"></script>
+  <script>
+    window.twttr = (function (d,s,id) {
+      var t, js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
+      js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+      return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+    }(document, "script", "twitter-wjs"));
+  </script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>2048 Star Wars — desliza fichas y destruye el Imperio</title>
+  <meta name="description" content="Juega a 2048 Star Wars: desliza fichas de stormtroopers, TIE fighters y droides, une las parejas iguales y asciende por todos los rangos de la saga.">
+
+  <link rel="canonical" href="https://tile2048.github.io/2048-STARWARS/es/">
+  <link rel="alternate" hreflang="en" href="https://tile2048.github.io/2048-STARWARS/">
+  <link rel="alternate" hreflang="es" href="https://tile2048.github.io/2048-STARWARS/es/">
+  <link rel="alternate" hreflang="x-default" href="https://tile2048.github.io/2048-STARWARS/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="2048 Star Wars — desliza fichas y destruye el Imperio">
+  <meta property="og:description" content="Juega a 2048 Star Wars: desliza fichas de stormtroopers, TIE fighters y droides, une las parejas iguales y asciende por todos los rangos de la saga.">
+  <meta property="og:url" content="https://tile2048.github.io/2048-STARWARS/es/">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <link href="../style/main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="apple-touch-icon" href="../meta/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="format-detection" content="telephone=no" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "2048 Star Wars",
+    "inLanguage": "es",
+    "url": "https://tile2048.github.io/2048-STARWARS/es/",
+    "description": "Versión Star Wars del puzle de fichas 2048: une fichas iguales para subir de stormtrooper a Death Star."
+  }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <nav class="lang-links"><a href="../" hreflang="en" lang="en">English</a> <span>Español</span></nav>
+
+    <div class="heading">
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+      <div class="title-container">
+        <h1 class="title">2048<small>Star Wars</small></h1>
+      </div>
+    </div>
+
+    <div class="above-game">
+      <p class="game-intro">¡Únete a las fichas y destruye el <strong>IMPERIO!</strong></p>
+      <a class="restart-button">Nueva partida</a>
+    </div>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+	        <a class="keep-playing-button">Seguir jugando</a>
+          <a class="retry-button">Reintentar</a>
+          <div class="score-sharing"></div>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
+    </div>
+
+    <p class="game-explanation">
+      <strong class="important">Cómo jugar:</strong> usa las <strong>teclas de flecha</strong> para mover las fichas. Cuando dos fichas con el mismo símbolo se tocan, ¡<strong>ascienden de nivel!</strong>
+    </p>
+    <p class="game-about">
+      Un stormtrooper en el 2 abre el tablero y el Death Star en el 2048 lo cierra. Entre ambos quedan un super trooper, Darth Vader, un TIE fighter, un x-wing, el Millennium Falcon, un AT-AT, C-3PO, R2-D2 y Yoda: once fichas, una por valor, cada una con su dibujo en lugar de un número. Las flechas o un deslizamiento las mueven todas a la vez, y dos dibujos iguales se funden en el siguiente, sumando puntos. Guarda casillas libres y piensa un par de jugadas: un tablero lleno sin parejas termina la partida. Junta el Death Star para despejar la galaxia.
+    </p>
+    <hr>
+    <p class="tile-legend"><strong class="important">Leyenda de fichas:</strong></p>
+    <div class="legend-list">
+      <div class="legend-row">
+        <div class="legend-grid"><div class="legend-cell cell-2"><img src="../style/img/2.svg" alt="stormtrooper"></div></div>
+        <p>stormtrooper</p>
+      </div>
+      <div class="legend-row">
+        <div class="legend-grid"><div class="legend-cell cell-4"><img src="../style/img/4.svg" alt="super trooper"></div></div>
+        <p>super trooper</p>
+      </div>
+      <div class="legend-row">
+        <div class="legend-grid"><div class="legend-cell cell-8"><img src="../style/img/8.svg" alt="Darth Vader"></div></div>
+        <p>Darth Vader</p>
+      </div>
+      <div class="legend-row">
+        <div class="legend-grid"><div class="legend-cell cell-16"><img src="../style/img/16.svg" alt="TIE fighter"></div></div>
+        <p>TIE fighter</p>
+      </div>
+      <div class="legend-row">
+        <div class="legend-grid"><div class="legend-cell cell-32"><img src="../style/img/32.svg" alt="X-wing"></div></div>
+        <p>X-wing</p>
+      </div>
+      <div class="legend-row">
+        <div class="legend-grid"><div class="legend-cell cell-64"><img src="../style/img/64.svg" alt="Millennium Falcon"></div></div>
+        <p>Millennium Falcon</p>
+      </div>
+      <div class="legend-row">
+        <div class="legend-grid"><div class="legend-cell cell-128"><img src="../style/img/128.svg" alt="AT-AT transporte blindado de asalto"></div></div>
+        <p>AT-AT transporte blindado de asalto</p>
+      </div>
+      <div class="legend-row">
+        <div class="legend-grid"><div class="legend-cell cell-256"><img src="../style/img/256.svg" alt="C-3PO droide de protocolo"></div></div>
+        <p>C-3PO droide de protocolo</p>
+      </div>
+      <div class="legend-row">
+        <div class="legend-grid"><div class="legend-cell cell-512"><img src="../style/img/512.svg" alt="R2-D2 droide astromecánico"></div></div>
+        <p>R2-D2 droide astromecánico</p>
+      </div>
+      <div class="legend-row">
+        <div class="legend-grid"><div class="legend-cell cell-1024"><img src="../style/img/1024.svg" alt="Yoda"></div></div>
+        <p>Yoda</p>
+      </div>
+      <div class="legend-row">
+        <div class="legend-grid"><div class="legend-cell cell-2048"><img src="../style/img/2048.svg" alt="Death Star"></div></div>
+        <p>Death Star</p>
+      </div>
+    </div>
+    <hr>
+    <p class="disclaimer">
+    <strong class="important">Nota:</strong> Una variante creada por aficionados de 2048, el juego original de Gabriele Cirulli.
+    </p>
+    <hr>
+    <p class="credits">
+      Iconos de Star Wars por <a href="http://sensibleworld.com/news/more-free-star-wars-icons/" title="Free Star Wars Icons by Sensible World">Jory Raphael</a>.
+    </p>
+  </div>
+
+  <script src="../js/bind_polyfill.js"></script>
+  <script src="../js/classlist_polyfill.js"></script>
+  <script src="../js/animframe_polyfill.js"></script>
+  <script>
+    // Assets and sentences of this page. The English page sits at the repo root.
+    window.GAME_ROOT = "../";
+
+    // Text that only appears once a game is running, in the language of this page.
+    window.PAGE_STRINGS = {
+      "game-won": "¡Ganaste!",
+      "game-over": "¡Fin del juego!",
+      "tweet1": "Conseguí \"",
+      "tweet2": "\" en 2048-STARWARS #2048game",
+      "2": "stormtrooper",
+      "4": "super trooper",
+      "8": "Darth Vader",
+      "16": "TIE fighter",
+      "32": "X-wing",
+      "64": "Millennium Falcon",
+      "128": "AT-AT transporte blindado de asalto",
+      "256": "C-3PO droide de protocolo",
+      "512": "R2-D2 droide astromecánico",
+      "1024": "Yoda",
+      "2048": "Death Star",
+      "p0": "trooper",
+      "p2": "trooper",
+      "p4": "s.trooper",
+      "p8": "Vader",
+      "p16": "TIE",
+      "p32": "x-wing",
+      "p64": "Falcon",
+      "p128": "at-at",
+      "p256": "c-3po",
+      "p512": "r2-d2",
+      "p1024": "Yoda",
+      "p2048": "Death Star"
+    };
+
+    function Localize(key) {
+      var name = String(key);
+      if (window.PAGE_STRINGS.hasOwnProperty(name)) return window.PAGE_STRINGS[name];
+      // Scores that no longer sit on a tile fall back to the plain number.
+      if (name.charAt(0) === "p" && window.PAGE_STRINGS.hasOwnProperty(name.slice(1))) {
+        return window.PAGE_STRINGS[name.slice(1)];
+      }
+      return name;
+    }
+  </script>
+  <script src="../js/keyboard_input_manager.js"></script>
+  <script src="../js/html_actuator.js"></script>
+  <script src="../js/grid.js"></script>
+  <script src="../js/tile.js"></script>
+  <script src="../js/local_storage_manager.js"></script>
+  <script src="../js/game_manager.js"></script>
+  <script src="../js/application.js"></script>
+  <script>
+    window.twttr = (function (d,s,id) {
+      var t, js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
+      js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+      return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+    }(document, "script", "twitter-wjs"));
+  </script>
+</body>
+</html>
